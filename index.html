@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Tun Tauk! 🎂</title>
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="A special programmer-themed birthday website for Tun Tauk. vNewYear.0 released!">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for Confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Background Decorative Elements -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="grid-bg"></div>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span class="status-text">sys.status == "celebrating"</span>
+      </div>
+      <h1 class="main-title">Happy Birthday, Tun Tauk <span class="emoji">🎂</span></h1>
+      <div class="subtitle-container">
+        <span class="prompt-symbol">&gt;</span>
+        <span id="typing-text" class="subtitle"></span><span class="cursor">|</span>
+      </div>
+    </header>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+      <!-- Left Column: Terminal & Code Block -->
+      <div class="column">
+        <!-- Terminal UI -->
+        <div class="card terminal-card" id="terminal-window">
+          <div class="card-header">
+            <div class="window-controls">
+              <span class="dot close"></span>
+              <span class="dot minimize"></span>
+              <span class="dot expand"></span>
+            </div>
+            <span class="window-title">bash — tuntauk@birthday</span>
+          </div>
+          <div class="card-body terminal-body">
+            <div class="terminal-line"><span class="t-prompt">tuntauk@pc:~$</span> npm run birthday</div>
+            <div class="terminal-line t-output">Compiling wishes...</div>
+            <div class="terminal-line t-success">✔ Happy Birthday, Tun Tauk!</div>
+            <div class="terminal-line t-info">ℹ May your dreams deploy successfully this year.</div>
+          </div>
+        </div>
+
+        <!-- Code Block -->
+        <div class="card code-card">
+          <div class="card-header">
+            <div class="window-controls">
+              <span class="dot code-dot"></span>
+            </div>
+            <span class="window-title">birthday.js</span>
+          </div>
+          <div class="card-body code-body">
+            <pre><code><span class="keyword">const</span> friend = <span class="string">"Tun Tauk"</span>;
+
+<span class="keyword">function</span> <span class="function-name">birthdayWish</span>() {
+  <span class="keyword">return</span> <span class="string">"Wishing you happiness, success, peace, and zero bugs in life."</span>;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Version Update & Celebration Controller -->
+      <div class="column">
+        <!-- Version Update Card -->
+        <div class="card release-card">
+          <div class="card-header">
+            <span class="version-tag">vNewYear.0</span>
+            <span class="window-title">CHANGELOG.md</span>
+          </div>
+          <div class="card-body release-body">
+            <h3 class="release-title">Tun Tauk vNewYear.0 Released</h3>
+            
+            <div class="changelog-section">
+              <div class="section-header">
+                <span class="icon add-icon">+</span>
+                <h4>New Features</h4>
+              </div>
+              <ul class="changelog-list">
+                <li><span class="highlight">happiness</span> — Core engine updated to maximum joy.</li>
+                <li><span class="highlight">success</span> — Auto-compile dreams into achievements.</li>
+                <li><span class="highlight">confidence</span> — Boosted stack size for self-belief.</li>
+                <li><span class="highlight">peace</span> — Enabled silent background processing for tranquility.</li>
+                <li><span class="highlight">new opportunities</span> — Added support for multiple career/life API endpoints.</li>
+              </ul>
+            </div>
+
+            <div class="changelog-section">
+              <div class="section-header">
+                <span class="icon fix-icon">🔧</span>
+                <h4>Bug Fixes</h4>
+              </div>
+              <ul class="changelog-list">
+                <li><span class="fix-item">stress</span> reduced & memory leaks patched.</li>
+                <li><span class="fix-item">worries</span> removed from default state configuration.</li>
+                <li><span class="fix-item">bad days</span> deprecated and replaced with growth experiences.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Celebration Controls -->
+        <div class="card celebration-card">
+          <div class="card-body celebration-body">
+            <p class="celebration-prompt">Ready to initialize the celebration sequence?</p>
+            <button id="celebration-btn" class="btn btn-primary">
+              <span class="btn-icon">⚡</span> Run Celebration()
+            </button>
+            <div id="wish-display" class="wish-display hidden">
+              <div class="wish-header">
+                <span class="wish-label">Console Output</span>
+                <span class="wish-timestamp">stdout</span>
+              </div>
+              <div id="wish-text" class="wish-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with &lt;3 for Tun Tauk • Built on the stack of friendship</p>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
